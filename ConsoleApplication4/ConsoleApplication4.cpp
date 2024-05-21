@@ -1,5 +1,3 @@
-﻿
-
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -7,20 +5,18 @@
 #include <bitset>
 
 using namespace std;
+
 //7.2.1
 int submain14()
 {
     unsigned char flags = 0x00;
     printf("The original meaning: 0x%02X\n", flags);
-
     // Маска для взведения флагов с индексами 3 и 5 (0x20 - бит 5, 0x08 - бит 3)
     unsigned char mask1 = 0x28;
-
     // Взводим флаги с индексами 3 и 5 путем применения маски
     flags |= mask1;
     printf("Mask for raising flags 3 and 5: 0x%02X\n", mask1);
     printf("The value after raising flags 3 and 5: 0x%02X\n", flags);
-
     // Маска для инвертирования флагов с индексами 0, 2 и 3 (0x0D - биты 0, 2 и 3)
     unsigned char mask2 = 0x0D;
     flags ^= mask2;
@@ -31,9 +27,6 @@ int submain14()
     printf("Flag reset mask 2: 0x%02X\n", mask3);
     printf("The value after the flag is reset 2: 0x%02X\n", flags);
     return 0;
-
-
-
 }
 // 7.2
 int submain13()
@@ -48,8 +41,7 @@ int submain13()
     unsigned char mask7 = 0b01000000; // седьмой бит
     unsigned char mask8 = 0b10000000; // восьмой бит
     unsigned char reseter = 0b11111101; // битовый ресетер
-
-
+    
     flags |= mask3; // установка 3 бита
     flags |= mask5; // установка 5 бита
     if (flags & mask3)
@@ -82,9 +74,6 @@ int submain13()
     submain14();
 
     return 0;
-
-
-
 }
 // 7.1
 int submain12()
@@ -116,9 +105,6 @@ int submain12()
     submain13();
 
     return 0;
-
-
-
 }
 
 //6.2
@@ -158,9 +144,6 @@ int submain11()
     submain12();
 
     return 0;
-
-
-
 }
 //6.1.1
 int submain10()
@@ -184,9 +167,6 @@ int submain10()
     submain11();
 
     return 0;
-
-
-
 }
 //6.1
 int submain9()
@@ -210,9 +190,6 @@ int submain9()
     submain10();
 
     return 0;
-
-
-
 }
 
 //5.2
@@ -251,9 +228,6 @@ int submain8()
     submain9();
 
     return 0;
-
-
-
 }
 
 //5.1
@@ -279,9 +253,6 @@ int submain7()
     submain8();
 
     return 0;
-
-
-
 }
 
 //4.1 | 4.2
@@ -306,9 +277,6 @@ int submain6()
     cout << "\n------------------------------------------\n" << endl;
     submain7();
     return 0;
-
-
-
 }
 
 //3.2
@@ -325,9 +293,6 @@ int submain5()
 
 
     return 0;
-
-
-
 }
 
 // 3.1
@@ -367,9 +332,6 @@ int submain3()
     submain4();
 
     return 0;
-
-
-
 }
 
 //2.2.1
@@ -398,9 +360,6 @@ int submain2()
     cout << "\n------------------------------------------\n" << endl;
     submain3();
     return 0;
-
-
-
 }
 //2.2
 int submain()
@@ -427,9 +386,6 @@ int submain()
     submain2();
 
     return 0;
-
-
-
 }
 //1.1.1 | 2.1
 int submain0()
@@ -444,9 +400,6 @@ int submain0()
     cout << "\n------------------------------------------\n" << endl;
     submain();
     return 0;
-
-
-
 }
 int main()
 {
